@@ -24,14 +24,8 @@ there are two kind of queries we can choose:
     /query.py (two query functions)
     /ntsb.db
     /demos (results of unit tests)
-        /2008-01-01 _to_2008-04-01_fatalInjuryAccident_preview.png
-        /2008-01-01_2008-04-01_fatal_0.json
-        /2008-01-01_2008-04-01_fatal_0.zip
-        /2009-01-01 _to_2009-02-01_closedAccident_preview.png
-        /2009-01-01_2009-02-01_closed_0.json
-        /2009-01-01_2009-02-01_closed_0.zip
-        /ClosedAccidentBetween_2009-01-01_and_2009-02-01.csv
-        /FatalInjuryAccidentBetween_2008-01-01_and_2008-04-01.csv
+        /2008-01-01_to_2008-04-01_fatalInjuryAccident_preview.png
+        /2009-01-01_to_2009-02-01_closedAccident_preview.png
         /newCSVFiles.png
 
 
