@@ -46,7 +46,6 @@ it will show a table with first 20 rows of records in terminal
 and also automatically download a csv file with all the records.
 
 ![Image](./demos/2009-01-01_to_2009-02-01_closedAccident_preview.png)
-![Image](./demos/2009-01-01 _to_2009-02-01_closedAccident_preview.png)
 
 
 2) call "python3 main.py 2008-01-01 2008-04-01 fatal" in command line, 
@@ -55,7 +54,6 @@ it will show a table with first 20 rows of records in terminal
 and also automatically download a csv file with all the records.
 
 ![Image](./demos/2008-01-01_to_2008-04-01_fatalInjuryAccident_preview.png)
-![Image](./demos/2008-01-01 _to_2008-04-01_fatalInjuryAccident_preview.png)
 
 All the new files are saved in the current folder.
 ![Image](./demos/newCSVFiles.png)
