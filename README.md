@@ -1,4 +1,4 @@
-# ntsb-accident-report
+# NTSB_Accident_Report
 
 ## A project written in Python to fetch NTSB accident reports with given time period and other constraints.
 ## Introduction
@@ -66,4 +66,3 @@ and also automatically download a csv file with all the records.
 All the new files are saved in the current folder.
 ![Image](./demos/newCSVFiles.png)
     
-# NTSB_Accident_Report
