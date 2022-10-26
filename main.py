@@ -160,23 +160,23 @@ def insert_data_into_tables(zips):
                             DBSession.add(new_accVehi_entry)
                             DBSession.commit()
 
-                        if 'cm_events' in v:
-                            events = v["cm_events"]
-                            # event_entries = []
-                            for e in events:
-                                
-                                new_event_entry = Events(cm_mkey = cm_mkey,
-                                                registrationNumber = registrationNumber,
-                                                cm_eventCode = e["cm_eventCode"],
-                                                cicttEventSOEGroup = e["cicttEventSOEGroup"] if "cicttEventSOEGroup" in e else None,
-                                                cicttPhaseSOEGroup = e["cicttPhaseSOEGroup"] if "cicttPhaseSOEGroup" in e else None,
-                                                cm_isDefiningEvent = e["cm_isDefiningEvent"] if "cm_isDefiningEvent" in e else None,
-                                                cm_sequenceNum = e["cm_sequenceNum"] if "cm_sequenceNum" in e else None
-                                                )
-                            
-                                # event_entries.append(new_event_entry)
-                                DBSession.add(new_event_entry)
-                                DBSession.commit()
+                            if 'cm_events' in v:
+                                events = v["cm_events"]
+                                # event_entries = []
+                                for e in events:
+
+                                    new_event_entry = Events(cm_mkey = cm_mkey,
+                                                    registrationNumber = registrationNumber,
+                                                    cm_eventCode = e["cm_eventCode"],
+                                                    cicttEventSOEGroup = e["cicttEventSOEGroup"] if "cicttEventSOEGroup" in e else None,
+                                                    cicttPhaseSOEGroup = e["cicttPhaseSOEGroup"] if "cicttPhaseSOEGroup" in e else None,
+                                                    cm_isDefiningEvent = e["cm_isDefiningEvent"] if "cm_isDefiningEvent" in e else None,
+                                                    cm_sequenceNum = e["cm_sequenceNum"] if "cm_sequenceNum" in e else None
+                                                    )
+
+                                    # event_entries.append(new_event_entry)
+                                    DBSession.add(new_event_entry)
+                                    DBSession.commit()
 
                 #     DBSession.add_all(event_entries)
             
