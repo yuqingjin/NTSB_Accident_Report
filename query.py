@@ -10,9 +10,8 @@ def search_closed_in_n_month(start_date, end_date):
     conn = sqlite3.connect("ntsb.db")
     # query those closed accidents in past serveral months
     query = """SELECT *
-    FROM ((accidents INNER JOIN accident_vehicle ON accidents.cm_mkey = accident_vehicle.cm_mkey) 
-    INNER JOIN vehicles ON accident_vehicle.registrationNumber = vehicles.registrationNumber) 
-    INNER JOIN events ON events.cm_mkey = accidents.cm_mkey
+    FROM ((accidents LEFT JOIN accident_vehicle ON accidents.cm_mkey = accident_vehicle.cm_mkey) 
+    LEFT JOIN vehicles ON accident_vehicle.registrationNumber = vehicles.registrationNumber) 
     WHERE accidents.cm_closed = 1 AND accidents.cm_eventdate BETWEEN '{start_date}' AND '{end_date}'
     GROUP BY vehicles.registrationNumber
     ORDER BY accidents.cm_eventDate""".format(start_date = start_date_convert, end_date = end_date_convert)
@@ -37,9 +36,8 @@ def search_fatalInjuryMoreThanOne_in_n_month(start_date, end_date):
     conn = sqlite3.connect("ntsb.db")
     # query those closed accidents in past serveral months
     query = """SELECT *
-    FROM ((accidents INNER JOIN accident_vehicle ON accidents.cm_mkey = accident_vehicle.cm_mkey) 
-    INNER JOIN vehicles ON accident_vehicle.registrationNumber = vehicles.registrationNumber) 
-    INNER JOIN events ON events.cm_mkey = accidents.cm_mkey
+    FROM ((accidents LEFT JOIN accident_vehicle ON accidents.cm_mkey = accident_vehicle.cm_mkey) 
+    LEFT JOIN vehicles ON accident_vehicle.registrationNumber = vehicles.registrationNumber) 
     WHERE accidents.cm_fatalInjuryCount >= 1 AND accidents.cm_eventdate BETWEEN '{start_date}' AND '{end_date}'
     GROUP BY vehicles.registrationNumber
     ORDER BY accidents.cm_eventDate""".format(start_date = start_date_convert, end_date = end_date_convert)
